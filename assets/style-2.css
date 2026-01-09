@@ -1,3 +1,8 @@
+:root {
+  --particles-min-height: 100vh;
+  --min-height: 100vh;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -6,6 +11,7 @@ body {
   font-family: "Roboto", sans-serif;
   color: white;
   line-height: 1.2;
+  background-color: black;
 }
 
 h1 {
@@ -17,6 +23,7 @@ h2 {
   font-size: 2.7rem;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
+
 p {
   font-size: 1.8rem;
 }
@@ -27,25 +34,20 @@ a {
 }
 
 section {
-  min-height: 100vh;
+  min-height: var(--min-height);
   align-content: center;
 }
 
 .section-1 {
-  min-height: 100vh;
+  min-height: var(--min-height);
   margin-top: -40px;
   padding: 2rem 1.5rem;
   align-content: center;
 }
 
-.section-2 {
-  min-height: 100vh;
-  padding: 2rem 1.5rem;
-  align-content: center;
-}
-
+.section-2,
 .section-3 {
-  min-height: 100vh;
+  min-height: var(--min-height);
   padding: 2rem 1.5rem;
   align-content: center;
 }
@@ -64,14 +66,13 @@ section {
   position: fixed;
   top: -2px;
   left: 30;
-
   color: rgba(255, 255, 255, 0.89);
   transition: opacity 0.8s ease;
 }
 
 .nav-menu {
   display: flex;
-  gap: 1.5rem; /* Расстояние между ссылками */
+  gap: 1.5rem;
   align-items: center;
   margin-top: -21px;
 }
@@ -89,6 +90,7 @@ section {
   position: relative;
   transition: color 0.3s ease;
 }
+
 .nav-link:hover {
   color: cyan;
   text-shadow: 0 0 20px cyan, 0 0 40px cyan;
@@ -114,28 +116,13 @@ section {
   align-items: flex-start;
 }
 
-.box {
-}
-
-.grid-container {
-  display: grid;
-  grid-auto-columns: 150px;
-  grid-auto-rows: 150px;
-  gap: 1em;
-  margin: -10px;
-  grid-template-areas:
-    "box-1 box-1 box-1"
-    "box-2 box-2 box-2"
-    "box-2 box-2 box-2";
-}
-
+.grid-container,
 .grid-container-2 {
   display: grid;
   grid-auto-columns: 150px;
   grid-auto-rows: 150px;
   gap: 1em;
   margin: -10px;
-
   grid-template-areas:
     "box-1 box-1 box-1"
     "box-2 box-2 box-2"
@@ -176,14 +163,10 @@ section {
   grid-auto-rows: 16px;
   gap: 1em;
   margin: 10px;
-  padding: auto;
   margin-top: -10px;
   align-self: flex-end;
   justify-items: start;
   justify-content: center;
-  grid-template-areas:
-    "box-1 box-2"
-    "box-3 box-3";
 }
 
 .grid-container-button {
@@ -219,7 +202,7 @@ section {
 
 .particles-section {
   position: relative;
-  min-height: 100vh;
+  min-height: var(--particles-min-height);
   overflow: hidden;
   background: black;
 }
@@ -232,24 +215,26 @@ section {
   padding: 20;
 }
 
-.list-programsprache {
-  li {
-    font-size: 1.3rem;
-  }
+.list-programsprache li {
+  font-size: 1.3rem;
 }
+
 .list-konzept {
   margin-top: 90px;
-  li {
-    font-size: 1.2rem;
-  }
+}
+
+.list-konzept li {
+  font-size: 1.2rem;
 }
 
 .list-kenntnisse {
   margin-top: 32px;
-  li {
-    font-size: 1.6rem;
-  }
 }
+
+.list-kenntnisse li {
+  font-size: 1.6rem;
+}
+
 .particles-canvas {
   pointer-events: none;
   position: absolute;
@@ -264,9 +249,6 @@ section {
   z-index: 1;
 }
 
-body {
-  background-color: black;
-}
 canvas {
   display: block;
 }
@@ -278,19 +260,16 @@ canvas {
 
   .grid-container-4.first {
     align-self: flex-end;
-    margin-top: 0;
     margin-right: -2%;
   }
 
   .grid-container-4.second {
     align-self: flex-start;
-    margin-top: 0;
     margin-left: 8%;
   }
 
   .grid-container-4.third {
     align-self: flex-end;
-    margin-top: 0;
     margin-right: -2%;
   }
 }
@@ -310,15 +289,15 @@ canvas {
   .margin-left {
     margin-left: 0 !important;
   }
-}
 
-@media (max-width: 768px) {
   h1 {
     font-size: 2.5rem;
   }
+
   h2 {
     font-size: 2rem;
   }
+
   p,
   li {
     font-size: 1.2rem;
@@ -367,9 +346,11 @@ canvas {
   text-align: center;
   padding: 3rem 0;
 }
+
 .social-links {
   margin: -24px;
 }
+
 .social-links a {
   margin: 0 1.5rem;
   font-size: 1.5rem;
@@ -380,12 +361,11 @@ canvas {
 .social-links a:hover {
   color: cyan;
 }
+
 .project-link.github:hover {
-  background: white;
+  background: cyan;
   color: aqua;
   text-shadow: 0 0 20px rgb(13, 0, 255), 0 0 40px rgb(81, 255, 0);
-  background-color: cyan;
-  transition: width 0.4s ease;
 }
 
 .wip-text {
