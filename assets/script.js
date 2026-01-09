@@ -1,6 +1,23 @@
-const PARTICLE_COUNT = 158;
-const MAX_DISTANCE = 124;
+// Базовые значения для десктопа
+let PARTICLE_COUNT = 158;
+let MAX_DISTANCE = 124;
 
+// Функция, которая обновляет количество частиц в зависимости от ширины экрана
+function updateParticleSettings() {
+  if (window.innerWidth <= 768) {
+    PARTICLE_COUNT = 86; // Меньше на мобильке — меньше лагов
+    MAX_DISTANCE = 100;
+  } else {
+    PARTICLE_COUNT = 158; // Полное количество на ПК
+    MAX_DISTANCE = 124;
+  }
+}
+
+// Вызываем при загрузке страницы
+updateParticleSettings();
+
+// И при каждом изменении размера окна
+window.addEventListener("resize", updateParticleSettings);
 class Particle {
   constructor(section) {
     this.section = section;
