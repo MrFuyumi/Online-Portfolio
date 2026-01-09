@@ -1,5 +1,5 @@
-const PARTICLE_COUNT = 180;
-const MAX_DISTANCE = 115;
+const PARTICLE_COUNT = 158;
+const MAX_DISTANCE = 124;
 
 class Particle {
   constructor(section) {
