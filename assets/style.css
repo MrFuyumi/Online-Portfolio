@@ -386,3 +386,15 @@ canvas {
   background-color: cyan;
   transition: width 0.4s ease;
 }
+
+.wip-text {
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.wip-text:hover {
+  color: cyan;
+  text-shadow: 0 0 10px cyan;
+  opacity: 1;
+}
