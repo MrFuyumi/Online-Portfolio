@@ -1,0 +1,377 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 3.4rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+h2 {
+  font-size: 2.7rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+p {
+  font-size: 1.8rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  min-height: 100vh;
+  align-content: center;
+}
+
+.section-1 {
+  min-height: 100vh;
+  margin-top: -40px;
+  padding: 2rem 1.5rem;
+  align-content: center;
+}
+
+.section-2 {
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+  align-content: center;
+}
+
+.section-3 {
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+  align-content: center;
+}
+
+.flex-container {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  margin-top: 40px;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  flex-shrink: 1;
+}
+
+.developer {
+  position: fixed;
+  top: -2px;
+  left: 30;
+
+  color: rgba(255, 255, 255, 0.89);
+  transition: opacity 0.8s ease;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1.5rem; /* Расстояние между ссылками */
+  align-items: center;
+  margin-top: -21px;
+}
+
+.contact {
+  margin-top: -94px;
+  margin-left: 51px;
+}
+
+.nav-link {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav-link:hover {
+  color: cyan;
+  text-shadow: 0 0 20px cyan, 0 0 40px cyan;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: cyan;
+  transition: width 0.4s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.flex-flow-column {
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+
+.box {
+}
+
+.grid-container {
+  display: grid;
+  grid-auto-columns: 150px;
+  grid-auto-rows: 150px;
+  gap: 1em;
+  margin: -10px;
+  grid-template-areas:
+    "box-1 box-1 box-1"
+    "box-2 box-2 box-2"
+    "box-2 box-2 box-2";
+}
+
+.grid-container-2 {
+  display: grid;
+  grid-auto-columns: 150px;
+  grid-auto-rows: 150px;
+  gap: 1em;
+  margin: -10px;
+
+  grid-template-areas:
+    "box-1 box-1 box-1"
+    "box-2 box-2 box-2"
+    "box-2 box-2 box-2";
+}
+
+.grid-container-3 {
+  display: grid;
+  grid-auto-columns: 150px;
+  grid-auto-rows: 100px;
+  gap: 1em;
+  margin: -10px;
+  grid-template-areas:
+    "box-1 box-1 box-1"
+    "box-1 box-1 box-1"
+    "box-1 box-1 box-1"
+    "box-2 box-2 box-2";
+}
+
+.grid-container-4 {
+  display: grid;
+  grid-auto-columns: 220px;
+  grid-auto-rows: 100px;
+  gap: 1em;
+  margin: -10px;
+  grid-template-areas:
+    "box-1 box-1 box-1"
+    "box-2 box-2 box-2"
+    "box-2 box-2 box-2"
+    "box-2 box-2 box-2";
+  width: 50%;
+}
+
+.grid-container-5 {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100px;
+  grid-auto-rows: 16px;
+  gap: 1em;
+  margin: 10px;
+  padding: auto;
+  margin-top: -10px;
+  align-self: flex-end;
+  justify-items: start;
+  justify-content: center;
+  grid-template-areas:
+    "box-1 box-2"
+    "box-3 box-3";
+}
+
+.grid-container-button {
+  display: grid;
+  grid-auto-columns: 100px;
+  grid-auto-rows: 20px;
+  grid-auto-flow: column;
+  gap: 1em;
+  align-self: flex-end;
+  justify-items: center;
+  justify-content: center;
+}
+
+.button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 80px;
+  background: none;
+  border: none;
+}
+
+.button:hover {
+  background-color: cyan;
+  box-shadow: 0 0 15px cyan;
+  transform: scale(1.1);
+}
+
+#about-bild {
+  width: 350px;
+  height: 350px;
+}
+
+.particles-section {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: black;
+}
+
+.header-section {
+  min-height: auto;
+  position: sticky;
+  top: 20;
+  z-index: 10;
+  padding: 20;
+}
+
+.list-programsprache {
+  li {
+    font-size: 1.3rem;
+  }
+}
+.list-konzept {
+  margin-top: 90px;
+  li {
+    font-size: 1.2rem;
+  }
+}
+
+.list-kenntnisse {
+  margin-top: 32px;
+  li {
+    font-size: 1.6rem;
+  }
+}
+.particles-canvas {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.particles-section .content {
+  position: relative;
+  z-index: 1;
+}
+
+body {
+  background-color: black;
+}
+canvas {
+  display: block;
+}
+
+@media (min-width: 769px) {
+  .flex-flow-column {
+    align-items: center;
+  }
+
+  .grid-container-4.first {
+    align-self: flex-end;
+    margin-top: 0;
+    margin-right: -2%;
+  }
+
+  .grid-container-4.second {
+    align-self: flex-start;
+    margin-top: 0;
+    margin-left: 8%;
+  }
+
+  .grid-container-4.third {
+    align-self: flex-end;
+    margin-top: 0;
+    margin-right: -2%;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex-flow-column {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid-container-4 {
+    margin: 10px 0 !important;
+    align-self: center;
+    width: 100%;
+  }
+
+  .margin-left {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  p,
+  li {
+    font-size: 1.2rem;
+  }
+}
+
+.justiny-content {
+  justify-content: end;
+  margin: -20;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+}
+
+.tech-tags span {
+  background: rgba(0, 255, 255, 0.2);
+  color: cyan;
+  padding: 0.3em 0.8em;
+  border-radius: 20px;
+  margin-right: 0.5em;
+  font-size: 0.9rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 3rem 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.social-links a {
+  margin: 0 1.5rem;
+  font-size: 1.5rem;
+  color: white;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: cyan;
+}
