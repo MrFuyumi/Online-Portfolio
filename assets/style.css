@@ -350,6 +350,10 @@ canvas {
   box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
 }
 
+.project-links p {
+  margin-top: 10px;
+}
+
 .tech-tags span {
   background: rgba(0, 255, 255, 0.2);
   color: cyan;
@@ -374,4 +378,11 @@ canvas {
 
 .social-links a:hover {
   color: cyan;
+}
+.project-link.github:hover {
+  background: white;
+  color: aqua;
+  text-shadow: 0 0 20px rgb(13, 0, 255), 0 0 40px rgb(81, 255, 0);
+  background-color: cyan;
+  transition: width 0.4s ease;
 }
