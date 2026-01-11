@@ -124,6 +124,8 @@ section {
     "box-2 box-2 box-2";
 }
 
+.box {
+}
 .grid-container-3 {
   display: grid;
   grid-auto-columns: 150px;
@@ -386,7 +388,8 @@ canvas {
     margin: -100px auto 0 auto;
   }
 
-  p, li {
+  p,
+  li {
     word-wrap: break-word;
     max-width: 100%;
     line-height: 1.4;

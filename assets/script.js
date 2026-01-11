@@ -1,22 +1,71 @@
-// Базовые значения для десктопа
 let PARTICLE_COUNT = 158;
 let MAX_DISTANCE = 124;
 
-// Функция, которая обновляет количество частиц в зависимости от ширины экрана
 function updateParticleSettings() {
   if (window.innerWidth <= 768) {
-    PARTICLE_COUNT = 86; // Меньше на мобильке — меньше лагов
-    MAX_DISTANCE = 100;
+    PARTICLE_COUNT = 96;
+    MAX_DISTANCE = 105;
   } else {
-    PARTICLE_COUNT = 158; // Полное количество на ПК
+    PARTICLE_COUNT = 158;
     MAX_DISTANCE = 124;
   }
 }
 
-// Вызываем при загрузке страницы
+function getScrollPercent() {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  if (docHeight <= 0) return 0;
+  return (scrollTop / docHeight) * 100;
+}
+
+let currentR = 245;
+let currentG = 220;
+let currentB = 255;
+
+const transitionStart = 60;
+const transitionEnd = 80;
+
+function updateLineColor() {
+  const percent = getScrollPercent();
+
+  let targetR, targetG, targetB;
+
+  if (percent < transitionStart) {
+    targetR = Math.round(100 - percent * 2.2);
+    targetG = Math.round(250 + percent * 1.85);
+    targetB = Math.round(285 - percent * 2.85);
+  } else if (percent > transitionEnd) {
+    targetR = Math.round(150 + percent * 5.2);
+    targetG = Math.round(250 - percent * 1.25);
+    targetB = Math.round(225 + percent * 2.25);
+  } else {
+    const progress =
+      (percent - transitionStart) / (transitionEnd - transitionStart);
+
+    const r1 = Math.round(100 - 60 * 2.2);
+    const g1 = Math.round(250 + 60 * 1.85);
+    const b1 = Math.round(285 - 60 * 2.85);
+
+    const r2 = Math.round(150 + 80 * 5.2);
+    const g2 = Math.round(250 - 80 * 1.25);
+    const b2 = Math.round(225 + 80 * 2.25);
+
+    targetR = Math.round(r1 + (r2 - r1) * progress);
+    targetG = Math.round(g1 + (g2 - g1) * progress);
+    targetB = Math.round(b1 + (b2 - b1) * progress);
+  }
+
+  currentR = Math.max(0, Math.min(255, targetR));
+  currentG = Math.max(0, Math.min(255, targetG));
+  currentB = Math.max(0, Math.min(255, targetB));
+}
+
+updateLineColor();
+window.addEventListener("scroll", updateLineColor);
+window.addEventListener("resize", updateLineColor);
+
 updateParticleSettings();
 
-// И при каждом изменении размера окна
 window.addEventListener("resize", updateParticleSettings);
 class Particle {
   constructor(section) {
@@ -75,7 +124,9 @@ sections.forEach((section) => {
         const dist = Math.sqrt(dx * dx + dy * dy);
 
         if (dist < MAX_DISTANCE) {
-          ctx.strokeStyle = `rgba(255,255,255,${1 - dist / MAX_DISTANCE})`;
+          ctx.strokeStyle = `rgba(${currentR}, ${currentG}, ${currentB}, ${
+            1 - dist / MAX_DISTANCE
+          })`;
           ctx.lineWidth = 0.5;
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
@@ -87,7 +138,6 @@ sections.forEach((section) => {
   }
 
   function animate() {
-    // Очистка с правильными размерами (в CSS-пикселях)
     ctx.fillStyle = "rgba(0,0,0,0.25)";
     const rect = section.getBoundingClientRect();
     ctx.fillRect(0, 0, rect.width, rect.height);
