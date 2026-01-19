@@ -5,7 +5,7 @@
     <link rel="icon" href="datei/favicon.png" type="image/png" />
     <link rel="stylesheet" href="assets/style-desktop.css" />
 
-    <!-- Потом мобильные — они перезапишут нужные правила только на телефоне -->
+    <!-- Mobile Styles — nur auf Bildschirmen ≤ 768px angewendet ----------------->
     <link
       rel="stylesheet"
       href="assets/style-mobile.css"
@@ -14,10 +14,11 @@
   </head>
   <body>
     <section class="header-section">
-      <!--<canvas class="particles-canvas"></canvas>-->
       <div class="content">
         <div class="flex-container justiny-content">
           <div class="developer"><h1>Junior Developer</h1></div>
+
+          <!-- NavigationsButtonmenü --------------------------------------------->
           <nav class="nav-menu">
             <a href="#section-1" class="nav-link">About</a>
             <a href="#section-3" class="nav-link">Projects</a>
@@ -26,10 +27,13 @@
         </div>
       </div>
     </section>
+
+    <!-- Section 1: Über mich ---------------------------------------------------->
     <section id="section-1" class="particles-section">
       <canvas class="particles-canvas"></canvas>
       <div class="content">
         <div class="flex-container">
+          <!-- Linker Block — Text -->
           <div class="grid-container-2">
             <div class="box" style="grid-area: box-1">
               <h2>Hallo, ich heiße Vladyslav Anuchyn</h2>
@@ -42,28 +46,31 @@
             </div>
           </div>
 
+          <!-- Rechter Block — Foto -->
           <div class="grid-container-3">
             <div class="box" style="grid-area: box-1">
               <div>
                 <img
                   id="about-bild"
-                  src="datei/GigaWebProgramierer.png"
+                  src="datei/png-klev-club-btl1-p-programmist-png-9.png"
                   alt="My photo"
                 />
               </div>
             </div>
             <div class="box" style="grid-area: box-2">
-              <p></p>
+              <!-- Noch leer — hier kann ein kurzer Slogan oder Tech-Stack hin -->
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Section 2: Fähigkeiten und Programiersprachen --------------------------->
     <section id="section-2" class="particles-section">
       <canvas class="particles-canvas"></canvas>
       <div class="content">
         <div class="flex-container flex-flow-column">
+          <!-- Block 1 — Programmiersprachen -->
           <div class="grid-container-4 first">
             <div class="box" style="grid-area: box-1">
               <h2>Technische Fähigkeiten</h2>
@@ -87,6 +94,8 @@
               </div>
             </div>
           </div>
+
+          <!-- Block 2 — Programmierlogik & Konzepte -->
           <div class="grid-container-4 second">
             <div class="box" style="grid-area: box-1">
               <h1>Programmierlogik & Konzepte</h1>
@@ -107,6 +116,8 @@
               </div>
             </div>
           </div>
+
+          <!-- Block 3 — Weitere Kenntnisse -->
           <div class="grid-container-4 third">
             <div class="box" style="grid-area: box-1">
               <div><h1>Weitere Kenntnisse</h1></div>
@@ -124,6 +135,8 @@
         </div>
       </div>
     </section>
+
+    <!-- Section 3: Projects ----------------------------------------------------->
     <section id="section-3" class="particles-section">
       <canvas class="particles-canvas"></canvas>
       <div class="content">
@@ -134,6 +147,7 @@
             </div>
             <div class="box" style="grid-area: box-2">
               <div class="project-grid">
+                <!-- Projektkarte (aktuell nur eine) -->
                 <div class="project-card">
                   <img
                     src="datei/PortfolioBild.png"
@@ -164,20 +178,21 @@
             </div>
           </div>
 
+          <!-- Hier werden noch Projektkarte hinzugefügt -->
           <div class="grid-container-3">
-            <div class="box" style="grid-area: box-1"></div>
-            <div class="box" style="grid-area: box-2"></div>
+            <!--Leerzeichen, damit das Projekt am Rand steht-->
           </div>
         </div>
       </div>
     </section>
     <div class="linie"><hr /></div>
 
+    <!-- Footer mit Contacts---------------------------------------------------->
     <footer id="contacts" class="footer">
       <div class="social-links">
         <p class="wip-text">Portfolio in Entwicklung © 2026</p>
         <a href="https://github.com/MrFuyumi" target="_blank">GitHub</a>
-        <a href="vladyslav.@tn.joblinge.de">Email</a>
+        <a href="mailto:vladyslav.anuchyn@tn.joblinge.de">Email</a>
         <a href="https://www.linkedin.com/in/vladyslav-anuchyn-608a4b3a4/"
           >Linkedin</a
         >
