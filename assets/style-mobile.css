@@ -35,15 +35,16 @@ section {
   align-content: center;
 }
 
-.section-1 {
+#section-1 {
+  top: -2%;
   min-height: 100vh;
-  margin-top: -40px;
+  margin-top: 0%;
   padding: 2rem 1.5rem;
   align-content: center;
 }
 
-.section-2,
-.section-3 {
+#section-2,
+#section-3 {
   min-height: 100vh;
   padding: 2rem 1.5rem;
   align-content: center;
@@ -51,7 +52,6 @@ section {
 
 .flex-container {
   display: flex;
-  gap: 10px;
   padding: 10px;
   margin-top: 40px;
   flex-flow: row wrap;
@@ -62,7 +62,7 @@ section {
 .developer {
   position: fixed;
   top: -2px;
-  left: 30px; /* исправил опечатку */
+  left: 30px;
   color: rgba(255, 255, 255, 0.89);
   transition: opacity 0.8s ease;
   z-index: 20;
@@ -119,8 +119,8 @@ section {
 .grid-container-3,
 .grid-container-4 {
   display: grid;
-  gap: 1em;
-  margin: 0; /* убрал все отрицательные margin */
+  gap: 0em;
+  margin: 0; 
   padding: 0 1rem;
   box-sizing: border-box;
 }
@@ -169,7 +169,7 @@ section {
 .header-section {
   min-height: auto;
   position: sticky;
-  top: 0; /* исправил top: 20 → top: 0 */
+  top: 0; 
   z-index: 10;
   padding: 20px;
 }
@@ -216,7 +216,6 @@ canvas {
   display: block;
 }
 
-/* Десктоп: лесенка */
 @media (min-width: 769px) {
   .flex-flow-column {
     align-items: center;
@@ -242,7 +241,6 @@ canvas {
   }
 }
 
-/* Мобильная версия: всё по центру, без вылетов */
 @media (max-width: 768px) {
   h1 {
     font-size: 2.6rem;
@@ -260,7 +258,6 @@ canvas {
     word-wrap: break-word;
   }
 
-  /* Header */
   .developer {
     position: static;
     margin-bottom: 1rem;
@@ -275,45 +272,40 @@ canvas {
   }
 
   .nav-menu {
-    margin-top: 1rem;
+    margin-top: 0.2rem;
     gap: 1.5rem;
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  /* Общие контейнеры */
   .flex-container,
   .flex-flow-column {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
     margin: 1rem 0;
     padding: 0 1rem;
   }
 
-  /* Все гриды — по центру, полная ширина, без фиксированных px */
   .grid-container,
   .grid-container-2,
   .grid-container-3,
   .grid-container-4 {
     width: 90%;
     max-width: 500px;
-    margin: 1rem auto;
+    margin: 1rem;
     padding: 1rem;
     grid-auto-columns: 1fr;
   }
 
-  /* Фото — по центру и ближе к тексту */
   #about-bild {
     width: 100%;
     max-width: 300px;
     height: auto;
-    margin: -80px auto 0 auto; /* поднято выше, меньше пробел */
+    margin: -80px auto 0 auto; 
     border-radius: 20px;
   }
 
-  /* Навыки — один под другим, по центру */
   .grid-container-4.first,
   .grid-container-4.second,
   .grid-container-4.third {
@@ -321,12 +313,17 @@ canvas {
     margin: 0 !important;
   }
 
-  /* Проект */
+  .grid-container-4.second,
+  .grid-container-4.third {
+    position: relative;
+    right: 18px;
+  }
+
   .project-grid {
     width: 90%;
     max-width: 500px;
-    margin: 0 auto;
-    padding: 0 1rem;
+    margin: 0;
+    padding: 0 0;
   }
 
   .project-card {
@@ -337,12 +334,10 @@ canvas {
     font-size: 1.4rem;
   }
 
-  /* Футер */
   .footer {
     padding: 2rem 1rem;
   }
 
-  /* Убираем горизонтальный скролл */
   body {
     overflow-x: hidden;
   }
@@ -350,7 +345,7 @@ canvas {
 
 .justiny-content {
   justify-content: end;
-  margin: -20px; /* исправил опечатку */
+  margin: -20px;
 }
 
 .project-grid {
@@ -380,9 +375,10 @@ canvas {
 .tech-tags span {
   background: rgba(0, 255, 255, 0.2);
   color: cyan;
+  gap: 0.5em;
   padding: 0.3em 0.8em;
   border-radius: 20px;
-  margin-right: 0.5em;
+  margin: 0.5em 0.5em 0.2em 0;
   font-size: 0.9rem;
 }
 

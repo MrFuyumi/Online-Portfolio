@@ -29,19 +29,20 @@ a {
 }
 
 section {
-  min-height: 100vh;
+  min-height: 80vh;
   align-content: center;
 }
 
-.section-1 {
-  min-height: 100vh;
-  margin-top: -40px;
+#section-1 {
+  top: -2%;
+  min-height: 80vh;
   padding: 2rem 1.5rem;
+  margin-top: 6%;
   align-content: center;
 }
 
-.section-2,
-.section-3 {
+#section-2,
+#section-3 {
   min-height: 100vh;
   padding: 2rem 1.5rem;
   align-content: center;
@@ -50,8 +51,18 @@ section {
 .flex-container {
   display: flex;
   gap: 10px;
+  padding: 12px;
+  margin-top: 50px;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  flex-shrink: 1;
+}
+
+.flex-container-projects {
+  display: flex;
+  gap: 10px;
   padding: 10px;
-  margin-top: 40px;
+  margin-top: -100px;
   flex-flow: row wrap;
   justify-content: space-around;
   flex-shrink: 1;
@@ -67,7 +78,7 @@ section {
 
 .nav-menu {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.2rem;
   align-items: center;
   margin-top: -21px;
 }
@@ -79,7 +90,7 @@ section {
 
 .nav-link {
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-weight: 500;
   padding: 0.5rem 0;
   position: relative;
@@ -279,12 +290,18 @@ canvas {
   margin-top: 10px;
 }
 
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;  
+  gap: 0.1em;      
+}
+
 .tech-tags span {
   background: rgba(0, 255, 255, 0.2);
   color: cyan;
   padding: 0.3em 0.8em;
   border-radius: 20px;
-  margin-right: 0.5em;
+  margin: 0.2rem;
   font-size: 0.9rem;
 }
 
@@ -337,7 +354,7 @@ canvas {
 
   .grid-container-4.first {
     align-self: flex-end;
-    margin-right: -2%;
+    margin-right: 0%;
   }
 
   .grid-container-4.second {
@@ -347,6 +364,6 @@ canvas {
 
   .grid-container-4.third {
     align-self: flex-end;
-    margin-right: -2%;
+    margin-right: 0%;
   }
 }
