@@ -6,11 +6,20 @@ let MAX_DISTANCE = 124;
 function updateParticleSettings() {
   if (window.innerWidth <= 768) {
     // Weniger Partikel → bessere Performance auf Handy
-    PARTICLE_COUNT = 96;
-    MAX_DISTANCE = 105;
-  } else {
+    PARTICLE_COUNT = 72;
+    MAX_DISTANCE = 92;
+  } else if (window.innerWidth <= 1650) {
+    PARTICLE_COUNT = 148;
+    MAX_DISTANCE = 122;
+  } else if (window.innerWidth <= 1920) {
     PARTICLE_COUNT = 158;
-    MAX_DISTANCE = 124;
+    MAX_DISTANCE = 138;
+  } else if (window.innerWidth <= 2560) {
+    PARTICLE_COUNT = 198;
+    MAX_DISTANCE = 154;
+  } else {
+    PARTICLE_COUNT = 328;
+    MAX_DISTANCE = 172;
   }
 }
 
