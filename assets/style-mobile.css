@@ -91,7 +91,9 @@ section {
 
 .nav-link:hover {
   color: cyan;
-  text-shadow: 0 0 20px cyan, 0 0 40px cyan;
+  text-shadow:
+    0 0 20px cyan,
+    0 0 40px cyan;
 }
 
 .nav-link::after {
@@ -120,7 +122,7 @@ section {
 .grid-container-4 {
   display: grid;
   gap: 0em;
-  margin: 0; 
+  margin: 0;
   padding: 0 1rem;
   box-sizing: border-box;
 }
@@ -169,7 +171,7 @@ section {
 .header-section {
   min-height: auto;
   position: sticky;
-  top: 0; 
+  top: 0;
   z-index: 10;
   padding: 20px;
 }
@@ -179,7 +181,7 @@ section {
 }
 
 .list-konzept {
-  margin-top: 90px;
+  margin-top: 0px;
 }
 
 .list-konzept li {
@@ -187,7 +189,7 @@ section {
 }
 
 .list-kenntnisse {
-  margin-top: 32px;
+  margin-top: 0px;
 }
 
 .list-kenntnisse li {
@@ -302,7 +304,7 @@ canvas {
     width: 100%;
     max-width: 300px;
     height: auto;
-    margin: -80px auto 0 auto; 
+    margin: -80px auto 0 auto;
     border-radius: 20px;
   }
 
@@ -359,7 +361,9 @@ canvas {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   padding: 1.5rem;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
   backdrop-filter: blur(10px);
 }
 
@@ -405,7 +409,9 @@ canvas {
 .project-link.github:hover {
   background: cyan;
   color: aqua;
-  text-shadow: 0 0 20px rgb(13, 0, 255), 0 0 40px rgb(81, 255, 0);
+  text-shadow:
+    0 0 20px rgb(13, 0, 255),
+    0 0 40px rgb(81, 255, 0);
 }
 
 .wip-text {
